@@ -42,6 +42,18 @@ def get_result_line_arr(row):
     for elem in row:
         result.append(elem)
     return result
+
+def check_downloads(conn):
+    count_rows = 'SELECT count(*) FROM "ZnoTest"'
+
+    cur = conn.cursor()
+    cur.execute(count_rows)
+    conn.commit()
+    result = cur.fetchall()
+    cur.close()
+    print('IN DB ROWS: ',result[0][0])
+    time.sleep(2)
+    return int(result[0][0])
 #-----------------------------------------------
 #Define special functions 
 #----------------------------------------------- 
@@ -53,5 +65,6 @@ def array_to_string(arr):
 
 if __name__ == '__main__':
     conn = connect.connect()
-    execute_query(conn)
+    if not check_downloads(conn):
+        execute_query(conn)
     connect.disconnect(conn)
