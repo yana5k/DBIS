@@ -1,0 +1,2 @@
+Execute querry:
+4.259939s
