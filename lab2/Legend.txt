@@ -1,0 +1,4 @@
+For file "result_querry.csv":
+	In Header "Region" means the region wich represents average ball in this row
+		  "Results" means the average ball for English test in current year
+		  "Year" means the year wich represents in this column

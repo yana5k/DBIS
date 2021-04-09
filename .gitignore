@@ -1,0 +1,5 @@
+*.csv
+flyway*
+.dist
+*xls
+*.pyc
