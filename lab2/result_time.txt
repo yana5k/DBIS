@@ -1,2 +1,7 @@
+flyway output:
+Successfully validated 2 migrations (execution time 00:00.029s)
+Successfully applied 2 migrations to schema "public", now at version v3 (execution time 10:11.188s)
+
+
 Execute querry:
 4.259939s
