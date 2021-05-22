@@ -1,0 +1,8 @@
+Connected to database:
+0.004803000000000002s
+
+Upload Data to database:
+1604.3560946999999s
+
+Query:
+15.265926199999967s
