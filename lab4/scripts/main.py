@@ -103,9 +103,9 @@ if __name__ == '__main__':
     print('='*100)
     
 
-    data_to_DB(collection)
+    # data_to_DB(collection)
     t0 = time.perf_counter()
-    header = ["Region","Year", "Max English Results"]
+    header = ["Region","Year", "Avg English Results"]
     query_results_list = collection.aggregate([
             {
                 "$match" : { 
@@ -118,7 +118,7 @@ if __name__ == '__main__':
                                             "region" : "$REGNAME",
                                             "year" : "$year",
                                         },
-                                "EngMaxResults": { "$max": "$engBall100" }
+                                "EngAvgResults": { "$avg": "$engBall100" }
                             }
             },
             {
@@ -127,7 +127,7 @@ if __name__ == '__main__':
 
     data = []
     for el in query_results_list:
-        row = [el["_id"]["region"], el["_id"]["year"], el["EngMaxResults"]]
+        row = [el["_id"]["region"], el["_id"]["year"], el["EngAvgResults"]]
         data.append(row)
 
     with open(query_result, 'w', encoding='utf-8') as res_file:
