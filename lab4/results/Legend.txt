@@ -1,0 +1,7 @@
+For file "querry_result.csv":
+	In Header "Region" means the region wich represents average ball in this row
+		  "Year" means the year wich represents in this column
+		  "Avg English Results" means the result for current year and region
+
+For file "time_result.txt":
+	For each operation shows the name and time result of this operation
