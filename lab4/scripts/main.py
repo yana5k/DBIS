@@ -29,8 +29,7 @@ def data_to_DB(collection):
                 i += IN_DB_ROWS
                 max_row_number = IN_DB_ROWS + step
             
-            for row in data:
-                # if i <= 100000:                    
+            for row in data:                    
                 if IN_DB_ROWS < i:
                     row.append(year)
                     i, max_row_number = line_to_json_list(header, row, i, step, max_row_number,year, collection) 
@@ -38,9 +37,7 @@ def data_to_DB(collection):
                     if IN_DB_ROWS == i and not len(json_list):
                         print(i, 'line is already in DB')
                         time.sleep(3)
-                    i += 1 
-                # else:
-                #     break       
+                    i += 1       
         if len(json_list):
             upload_json_to_db(collection,json_list)
         
@@ -107,7 +104,6 @@ if __name__ == '__main__':
     
 
     data_to_DB(collection)
-    # print(collection.find_one())
     t0 = time.perf_counter()
     header = ["Region","Year", "Max English Results"]
     query_results_list = collection.aggregate([
