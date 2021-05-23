@@ -11,3 +11,10 @@ All next related files are located in "lab2" folder
 - to get query results nessesary to config "database.ini" file and run "main.py"
 - see querry output: query result => result_querry.csv
 	    spend time result => result_time.txt
+	    
+Run Project Order for Lab 4:
+
+All next related files are located in "lab4" folder
+- need to set DB conection link and path to source 2019,2020 files in scripts/settings.py file;
+- see querry output: query result => querry_result.csv
+	    spend time result => time_result.txt
